@@ -1,0 +1,75 @@
+Algoritmo sin_titulo
+	// inicio el algoritmo//
+	
+	//pedimos el valor de los lados del triángulo//
+	Escribir "ingrese lado a"
+	leer a
+	
+	Escribir "ingrese lado b"
+	leer b
+	
+	Escribir  "ingrese lado c"
+	leer c
+	
+	//aplicamos la lógica de comparaciones para saber si es un triángulo//
+	Si a+c > b Y a+b > c Y b + c > a  Entonces
+		Escribir "Es un triángulo"
+		
+		//A continuación, como es un triángulo le pedimos que nos confirme si quiere saber si es rectángulo//
+		Escribir "Quieres Saber si es rectangulo? en caso de Si: 1, en caso de No:2"
+		leer Respuesta
+		
+		//Aplicamos la lógica en función de su respuesta//
+		Si Respuesta = 1 Entonces
+			
+			//En caso de ser sí calculamos//
+			Si a>b Entonces
+				cat1<-b
+				Si a>c Entonces
+					hip<-a
+					cat2<-c
+				SiNo
+					hip<-c
+					cat2<-a
+				FinSi
+			SiNo
+				cat1<-a
+				Si b>c Entonces
+					hip<-b
+					cat2<-c
+				SiNo
+					hip<-c
+					cat2<-b
+				FinSi
+			FinSi
+			
+			// ver si cumple con Pitagoras
+			Si hip^2 = cat1^2 + cat2^2 Entonces
+				// calcualar area
+				area<-(cat1*cat2)/2
+				Escribir "Si es un triángulo rectángulo"
+				Escribir "El area es: ",area
+			SiNo
+				Escribir "No es un triangulo rectangulo."
+			FinSi
+		SiNo
+			Escribir "Vale, pues nada"
+		FinSi
+		
+	SiNo
+		Escribir "No es un triángulo"
+	FinSi
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+FinAlgoritmo
